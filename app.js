@@ -439,15 +439,17 @@ app.post('/forgot', function(req, res, next) {
     },
     function(token, user, done) {
       var smtpTransport = nodemailer.createTransport({
-          service: 'Gmail', // no need to set host or port etc.
+          host: 'smtp.zoho.in',
+          port: 465,
+          secure: true,
           auth: {
-             user: 'futuregeneralitest@gmail.com',
+             user: 'futuregen@zohomail.in',
              pass: process.env.MAILPASS
          }
       });
       var mailOptions = {
         to: user.email,
-        from: 'futuregeneralitest@gmail.com',
+        from: 'futuregen@zohomail.in',
         subject: 'Future Generali Password Reset',
         text: 'You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n' +
           'Please click on the following link, or paste this into your browser to complete the process:\n\n' +
@@ -491,15 +493,17 @@ app.post('/admin/forgot', function(req, res, next) {
     },
     function(token, user, done) {
       var smtpTransport = nodemailer.createTransport({
-          service: 'Gmail', // no need to set host or port etc.
+          host: 'smtp.zoho.in',
+          port: 465,
+          secure: true,
           auth: {
-             user: 'futuregeneralitest@gmail.com',
+             user: 'futuregen@zohomail.in',
              pass: process.env.MAILPASS
          }
       });
       var mailOptions = {
         to: user.email,
-        from: 'futuregeneralitest@gmail.com',
+        from: 'futuregen@zohomail.in',
         subject: 'Future Generali Password Reset',
         text: 'You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n' +
           'Please click on the following link, or paste this into your browser to complete the process:\n\n' +
@@ -583,15 +587,17 @@ app.post('/reset/:token', function(req, res) {
     },
     function(user, done) {
       var smtpTransport = nodemailer.createTransport({
-        service: 'Gmail', 
+        host: 'smtp.zoho.in',
+        port: 465,
+        secure: true, 
         auth: {
-             user: 'futuregeneralitest@gmail.com',
+             user: 'futuregen@zohomail.in',
              pass: process.env.MAILPASS
          }
       });
       var mailOptions = {
         to: user.email,
-        from: 'futuregeneralitest@gmail.com',
+        from: 'futuregen@zohomail.in',
         subject: 'Your password has been changed',
         text: 'Hello,\n\n' +
           'This is a confirmation that the password for your account ' + user.email + ' has just been changed.\n'
@@ -652,15 +658,17 @@ app.post('/admin/reset/:token', function(req, res) {
     },
     function(user, done) {
       var smtpTransport = nodemailer.createTransport({
-        service: 'Gmail', 
+        host: 'smtp.zoho.in',
+        port: 465,
+        secure: true,
         auth: {
-             user: 'futuregeneralitest@gmail.com',
+             user: 'futuregen@zohomail.in',
              pass: process.env.MAILPASS
          }
       });
       var mailOptions = {
         to: user.email,
-        from: 'futuregeneralitest@gmail.com',
+        from: 'futuregen@zohomail.in',
         subject: 'Your password has been changed',
         text: 'Hello,\n\n' +
           'This is a confirmation that the password for your account ' + user.email + ' has just been changed.\n'
@@ -852,7 +860,7 @@ app.post('/contactus', (req, res) => {
   // setup email data with unicode symbols
   let mailOptions = {
     from: '"Nodemailer Contact" ${req.body.email}', // sender address
-    to: 'futuregeneralitest@gmail.com', // list of receivers
+    to: 'futuregen@zohomail.in', // list of receivers
     subject: 'Node Contact Request', // Subject line
     text: 'Hello world?', // plain text body
     html: output // html body
