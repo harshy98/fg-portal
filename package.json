@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -20,18 +21,18 @@
     "async": "^2.6.2",
     "bcrypt": "^3.0.4",
     "bcryptjs": "^2.4.3",
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.19.0",
     "btoa": "^1.2.1",
     "cloudinary": "^1.13.2",
     "connect-flash": "^0.1.1",
     "dotenv": "^8.1.0",
     "ejs": "^2.6.1",
-    "express": "^4.16.4",
+    "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
     "express-messages": "^1.0.1",
     "express-session": "^1.15.6",
     "express-validator": "^5.3.1",
-    "jssha": "^2.3.1",
+    "jssha": "^2.4.2",
     "method-override": "^3.0.0",
     "mongodb": "^3.1.13",
     "mongoose": "^5.4.13",

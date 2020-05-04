@@ -15,7 +15,7 @@ var bcrypt = require("bcrypt");
 var webpush = require("web-push");
 let jsSHA = require('jssha');
 let btoa = require('btoa');
-let applicationId = "b7d8a7.vidyo.io";
+let applicationId = "487689.vidyo.io";
 let developerKey = process.env.DEVKEY;
 
 app.use(express.static(__dirname + "/client"));
@@ -77,11 +77,11 @@ var serialized = body + '\0' + mac;
 return btoa(serialized);
 }
 
-app.get('/token', function(req, res) {
-let tenHours = 600 * 60;
+app.get('/token', (req, res) => {
+let thirtyMinutes = 30 * 60;
 let response = JSON.stringify({
-token: generateToken(tenHours)
-})
+token: generateToken(thirtyMinutes)
+});
 res.send(response);
 });
 
@@ -913,6 +913,4 @@ function isAdminLoggedIn(req,res,next){
     res.redirect("/admin/login");
 }
 
-app.listen(process.env.PORT, process.env.IP, function(){
-    console.log("started");
-});
+app.listen(process.env.PORT);
