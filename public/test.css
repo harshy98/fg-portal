@@ -1,0 +1,17 @@
+.my-nav {
+    background-color:rgb(197,35,25) !important;
+    min-height: 90px;
+}
+
+body {
+    font-family: 'Signika', sans-serif;
+
+
+}
+
+hr.style-six {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}

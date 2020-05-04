@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Signika:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" type="text/css" href="../test.css">
+</head>
+
+<body>
+
+    <nav class="navbar my-nav navbar-expand-lg navbar-light bg-light">
+        <div class="container" style="max-width: 72%">
+            <a class="navbar-brand ml-5" href="/"><img src="../logoo.png"></a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="mt-4">
+            <h2>Leaderboard</h2>
+        </div>
+        <hr>
+
+        <table style="width:100%" class="textAlign">
+            <thead>
+                <!-- <th>Ranking</th> -->
+                <th>Name</th>
+                <th>Score</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+            <% users.forEach(function(user){ %>
+            <tr>
+             <td><%= user.firstName %></td>
+              <td><%= user.score %></td>
+              <td><a href="/details/<%= user._id %>" >Profile</a></td>
+              </tr>
+             <% }); %>
+            </tbody>
+            
+         </table>
+    </div>
+
+
+    <script src="" async defer></script>
+     <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+ new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</html>

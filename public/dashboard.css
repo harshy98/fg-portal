@@ -1,0 +1,212 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: 'Raleway';
+ }
+
+html {
+  font-size: 16px;
+font-family: 'Raleway'; }
+
+#main {
+ height: 82vh; }
+
+
+#navigation {
+background: rgb(197,35,25);
+}
+#navigation-container {
+
+  display:flex;
+  justify-content: space-between;
+}
+#navigation-container {
+  position: relative;
+  left: 4rem;
+}
+#dashboard {
+  background: linear-gradient(to right bottom, rgba(254, 236, 235, 0.808), rgba(183, 50, 41, 0.808)), url("dashboard.jpg");
+  background-size: cover;
+  background-position: top;
+  padding: 2rem;
+  text-align: center;
+  height:100% ; }/*file:///F:/logout*/
+
+  #ul-check {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    list-style: none;
+    width: 17rem;
+  }
+
+/*#nav-item1{
+}
+#nav-item2{
+  
+}*/
+#navbarSupportedContent{
+  display: flex;
+  position: relative;
+  left: 11.7rem;
+}
+
+
+#dashboard-heading {
+  font-family: Calibri, 'Trebuchet MS', sans-serif,Arial, Helvetica, sans-serif;
+  font-size: 31px;
+  display: inline-block;
+  padding: .4rem .7rem;
+  border-radius: 5px;
+  padding: .8rem 5rem;
+  letter-spacing: .35rem;
+  text-transform: uppercase; }
+
+#dashboard-tile {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 85%;
+  margin: 1rem auto;
+  height: 28.125rem; }
+
+#dashboard-left {
+  color: rgb(197,35,25);
+  background: #dedede;
+  opacity: .9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90%;
+  justify-content: space-evenly;
+  border-right: 0.2rem dotted rgb(197,35,25);
+  width: 50%;  }
+
+.dashboard-left-item {
+  width: 11rem;
+  height: 3rem;
+  background: #dedede;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1.9px solid rgb(197,35,25);
+  font-weight: bold;
+  box-shadow: .1rem .1rem .6rem;
+  transition: 1s; }
+  .rotate-left:hover {
+    transform: rotateZ(1deg) scale(1.1);
+  }
+  .rotate-right:hover {
+    transform: rotateZ(-1deg) scale(1.1);
+  }
+
+.dashboard-left-item:hover {
+  border: none;
+  background: rgb(197,35,25);
+  color: #dedede;
+  box-shadow: 1rem 1rem 2rem;
+   }
+
+#dashboard-right {
+  color: rgb(197,35,25);
+  background: #dedede;
+  opacity: .8;
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%; }
+
+.dashboard-right-item:hover {
+  border: none;
+  background: rgb(197,35,25);
+  color: #dedede;
+  box-shadow: 1rem 1rem 2rem;
+  }
+
+.dashboard-right-item {
+  width: 11rem;
+  height: 3rem;
+  background: #dedede;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1.9px solid rgb(197,35,25);
+  font-weight: bold;
+  text-transform: uppercase;
+transition: 1s;
+box-shadow: .1rem .1rem .6rem; }
+
+
+@media screen and (max-width: 1000px) {
+  #navbarSupportedContent{
+  display: flex;
+  position: relative;
+  left: 7rem;
+}
+#ul-check {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    list-style: none;
+    width: 12rem;
+  }
+
+}
+@media screen and (max-width: 630px) {
+  html {
+    font-size: 13px; }
+
+  #dashboard-heading {
+    font-family: Calibri, 'Trebuchet MS', sans-serif,Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    display: inline-block;
+    padding: .4rem .7rem;
+    border-radius: 5px;
+    padding: .8rem 5rem;
+    letter-spacing: .3rem;
+    text-transform: uppercase; }
+
+  #dashboard {
+    text-align: center;
+    padding: 1rem .3rem; }
+
+  #dashboard-tile {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 28.125rem; }
+
+  .dashboard-left-item:hover {
+    border: none;
+    background: rgb(197,35,25);
+    color: #dedede;
+   }
+
+  .dashboard-left-item:hover {
+    border: none;
+    background: rgb(197,35,25);
+    color: #dedede;
+     } 
+   #navbarSupportedContent{
+   display: flex;
+   position: relative;
+   left: 4rem;
+   }
+   #ul-check {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    list-style: none;
+    width: 10rem;
+  }}
+
+/*# sourceMappingURL=style.css.map */

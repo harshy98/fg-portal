@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Signika:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" type="text/css" href="test.css">
+    </head>
+    <body>
+
+
+    <!-- navbar-->
+
+        <nav class="navbar my-nav navbar-expand-lg navbar-light bg-light">
+            <div class="container" style="max-width: 72%">
+                <a class="navbar-brand ml-5" href="/"><img src="logoo.png"></a>
+            </div>
+        </nav>
+
+        <div class="container">
+            
+            <h3 class=" mt-4">Create Test</h3>
+            <hr>
+
+            <form action='/createtest' method='POST'>
+                
+                <% for(var i=1;i<=10;i++){ %>
+                <li>
+                    <label for="statement">Question:</label>
+                    <input type="text" name="statement<%=i%>" id="statement">
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op<%=i%>" id="radio1" value="optA">
+                            <label class="form-check-label" for="radio1"><input type="text" name="optA<%=i%>"></label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op<%=i%>" id="radio2" value="optB">
+                            <label class="form-check-label" for="radio2"><input type="text" name="optB<%=i%>"></label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op<%=i%>" id="radio3" value="optC">
+                            <label class="form-check-label" for="radio3"><input type="text" name="optC<%=i%>"></label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op<%=i%>" id="radio4" value="optD">
+                            <label class="form-check-label" for="radio4"><input type="text" name="optD<%=i%>"></label>
+                    </div>
+                </li>
+               <% } %>
+                
+                <button class="btn btn-outline-danger ml-auto" type="submit" target="_blank">Submit</button>
+            </form>
+            <!--<button class="btn btn-outline-danger mr-auto" id="addnew" onClick="createnewques()">Add Question</button>
+        </div>
+
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!--<script>
+        var newQues = `<li>
+                    <label for="statement">Question:</label>
+                    <input type="text" name="statement" id="statement">
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op" id="radio1">
+                            <label class="form-check-label" for="radio1"><input type="text"></label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op" id="radio2">
+                            <label class="form-check-label" for="radio2"><input type="text"></label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op" id="radio3">
+                            <label class="form-check-label" for="radio3"><input type="text"></label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op" id="radio4">
+                            <label class="form-check-label" for="radio4"><input type="text"></label>
+                    </div>
+                    </li>`;
+        function createnewques(){
+            $("#addnew").on("click",function(e){
+                $("#ques1").after(newQues);
+            });
+        }
+        </script>-->
+        <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+ new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </body>
+</html>

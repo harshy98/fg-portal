@@ -1,0 +1,43 @@
+body {
+    font-family: 'Signika', sans-serif;
+}
+
+#text {
+    color: black;
+}
+#full-container {
+    background-size: cover;
+    background-position: top;
+    padding: 2rem;
+    height:100% ; 
+}
+
+#wholeBody {
+    margin-top: 45px;
+   
+    padding: 2rem 2rem 1.3rem;
+}
+   
+
+.my-nav {
+    background-color:rgb(197,35,25) !important;
+    min-height: 90px;
+}
+
+.form textarea {
+    transition: all 0.2s ease;
+    
+}
+#textarea-container {
+    padding: auto .65rem;
+}
+.form-checkbox{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+}
+#email{
+    width: 100%;
+}
+
+

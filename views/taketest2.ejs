@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Signika:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" type="text/css" href="test.css">
+</head>
+
+<body>
+
+
+    <!-- navbar-->
+
+    <nav class="navbar my-nav navbar-expand-lg navbar-light bg-light">
+        <div class="container" style="max-width: 72%">
+            <a class="navbar-brand ml-5" href="/"><img src="logoo.png"></a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <ol>
+        <h3 class=" mt-4">Questions</h3>
+        <hr>
+            <form action="/taketest2" method="POST">
+                <li>
+                    <h4><%= problem[0].statement%></h4>
+                    <ol>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op1" id="radio1" value="optA">
+                            <label class="form-check-label" for="radio1"><%=problem[0].optA%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op1" id="radio2" value="optB">
+                            <label class="form-check-label" for="radio2"><%=problem[0].optB%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op1" id="radio3" value="optC">
+                            <label class="form-check-label" for="radio3"><%=problem[0].optC%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op1" id="radio4" value="optD">
+                            <label class="form-check-label" for="radio4"><%=problem[0].optD%></label>
+                    </div>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <h4><%= problem[1].statement%></h4>
+                    <ol>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op2" id="radio1" value="optA">
+                            <label class="form-check-label" for="radio1"><%=problem[1].optA%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op2" id="radio2" value="optB">
+                            <label class="form-check-label" for="radio2"><%=problem[1].optB%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op2" id="radio3" value="optC">
+                            <label class="form-check-label" for="radio3"><%=problem[1].optC%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op2" id="radio4" value="optD">
+                            <label class="form-check-label" for="radio4"><%=problem[1].optD%></label>
+                    </div>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <h4><%= problem[2].statement%></h4>
+                    <ol>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op3" id="radio1" value="optA">
+                            <label class="form-check-label" for="radio1"><%=problem[2].optA%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op3" id="radio2" value="optB">
+                            <label class="form-check-label" for="radio2"><%=problem[2].optB%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op3" id="radio3" value="optC">
+                            <label class="form-check-label" for="radio3"><%=problem[2].optC%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op3" id="radio4" value="optD">
+                            <label class="form-check-label" for="radio4"><%=problem[2].optD%></label>
+                    </div>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <h4><%= problem[3].statement%></h4>
+                    <ol>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op4" id="radio1" value="optA">
+                            <label class="form-check-label" for="radio1"><%=problem[3].optA%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op4" id="radio2" value="optB">
+                            <label class="form-check-label" for="radio2"><%=problem[3].optB%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op4" id="radio3" value="optC">
+                            <label class="form-check-label" for="radio3"><%=problem[3].optC%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op4" id="radio4" value="optD">
+                            <label class="form-check-label" for="radio4"><%=problem[3].optD%></label>
+                    </div>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <h4><%= problem[4].statement%></h4>
+                    <ol>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op5" id="radio1" value="optA">
+                            <label class="form-check-label" for="radio1"><%=problem[4].optA%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op5" id="radio2" value="optB">
+                            <label class="form-check-label" for="radio2"><%=problem[4].optB%></label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op5" id="radio3" value="optC">
+                            <label class="form-check-label" for="radio3"><%=problem[4].optC%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op5" id="radio4" value="optD">
+                            <label class="form-check-label" for="radio4"><%=problem[4].optD%></label>
+                    </div>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <h4><%= problem[5].statement%></h4>
+                    <ol>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op6" id="radio1" value="optA">
+                            <label class="form-check-label" for="radio1"><%=problem[5].optA%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op6" id="radio2" value="optB">
+                            <label class="form-check-label" for="radio2"><%=problem[5].optB%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op6" id="radio3" value="optC">
+                            <label class="form-check-label" for="radio3"><%=problem[5].optC%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op6" id="radio4" value="optD">
+                            <label class="form-check-label" for="radio4"><%=problem[5].optD%></label>
+                    </div>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <h4><%= problem[6].statement%></h4>
+                    <ol>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op7" id="radio1" value="optA">
+                            <label class="form-check-label" for="radio1"><%=problem[6].optA%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op7" id="radio2" value="optB">
+                            <label class="form-check-label" for="radio2"><%=problem[6].optB%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op7" id="radio3" value="optC">
+                            <label class="form-check-label" for="radio3"><%=problem[6].optC%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op7" id="radio4" value="optD">
+                            <label class="form-check-label" for="radio4"><%=problem[6].optD%></label>
+                    </div>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <h4><%= problem[7].statement%></h4>
+                    <ol>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op8" id="radio1" value="optA">
+                            <label class="form-check-label" for="radio1"><%=problem[7].optA%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op8" id="radio2" value="optB">
+                            <label class="form-check-label" for="radio2"><%=problem[7].optB%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op8" id="radio3" value="optC">
+                            <label class="form-check-label" for="radio3"><%=problem[7].optC%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op8" id="radio4" value="optD">
+                            <label class="form-check-label" for="radio4"><%=problem[7].optD%></label>
+                    </div>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <h4><%= problem[8].statement%></h4>
+                    <ol>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op9" id="radio1" value="optA">
+                            <label class="form-check-label" for="radio1"><%=problem[8].optA%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op9" id="radio2" value="optB">
+                            <label class="form-check-label" for="radio2"><%=problem[8].optB%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op9" id="radio3" value="optC">
+                            <label class="form-check-label" for="radio3"><%=problem[8].optC%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op9" id="radio4" value="optD">
+                            <label class="form-check-label" for="radio4"><%=problem[8].optD%></label>
+                    </div>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <h4><%= problem[9].statement%></h4>
+                    <ol>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op10" id="radio1" value="optA">
+                            <label class="form-check-label" for="radio1"><%=problem[9].optA%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op10" id="radio2" value="optB">
+                            <label class="form-check-label" for="radio2"><%=problem[9].optB%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op10" id="radio3" value="optC">
+                            <label class="form-check-label" for="radio3"><%=problem[9].optC%></label>
+                    </div>
+                        </li>
+                        <li>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op10" id="radio4" value="optD">
+                            <label class="form-check-label" for="radio4"><%=problem[9].optD%></label>
+                    </div>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+                
+                <button class="btn btn-outline-danger ml-auto" type="submit">Submit</button>
+            </form>
+            <!-- <button class="btn btn-outline-danger mr-auto" id="addnew" onClick="createnewques()">Add Question</button> -->
+        </div>
+
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!--<script>
+        var newQues = `<li>
+                    <label for="statement">Question:</label>
+                    <input type="text" name="statement" id="statement">
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op" id="radio1">
+                            <label class="form-check-label" for="radio1"><input type="text"></label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op" id="radio2">
+                            <label class="form-check-label" for="radio2"><input type="text"></label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op" id="radio3">
+                            <label class="form-check-label" for="radio3"><input type="text"></label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="op" id="radio4">
+                            <label class="form-check-label" for="radio4"><input type="text"></label>
+                    </div>
+                    </li>`;
+        function createnewques(){
+            $("#addnew").on("click",function(e){
+                $("#ques1").after(newQues);
+            });
+        }
+        </script>-->
+         <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+ new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+{
+  "name": "future-generali-portal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xcodex123/future-generali-portal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xcodex123/future-generali-portal/issues"
+  },
+  "homepage": "https://github.com/xcodex123/future-generali-portal#readme",
+  "dependencies": {
+    "async": "^2.6.2",
+    "bcrypt": "^3.0.4",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "btoa": "^1.2.1",
+    "cloudinary": "^1.13.2",
+    "connect-flash": "^0.1.1",
+    "dotenv": "^8.1.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-ejs-layouts": "^2.5.0",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.3.1",
+    "jssha": "^2.3.1",
+    "method-override": "^3.0.0",
+    "mongodb": "^3.1.13",
+    "mongoose": "^5.4.13",
+    "multer": "^0.1.8",
+    "multer-storage-cloudinary": "^2.2.1",
+    "nodemailer": "^5.1.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1",
+    "web-push": "^3.3.3"
+  }
+}

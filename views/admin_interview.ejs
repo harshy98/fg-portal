@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+   <head>
+       <style>
+           body {
+               width: 100%;
+               height: 100%;
+           }
+           #video {
+               width: 800px;
+               height: 600px;
+           }
+           .login-box {
+               width: 100%;
+               display: flex;
+               justify-content: center;
+               margin-bottom: 10px;
+           }
+           .container {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+           }
+           </style>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Signika:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../videoCall.css">
+   </head>
+<body>
+  <nav class="navbar my-nav navbar-expand-lg navbar-light bg-light">
+            <div class="container" style="max-width: 72%">
+                <a class="navbar-brand ml-5" href="/"><img src="../logoo.png"></a>
+            </div>
+  </nav>
+
+<div class="container mt-5 ">
+<div class="login-box"><label for="name">UserId:</label>
+<input name="name" type="text" />
+<button id="join-call">Join</button></div>
+<div id="video"></div>
+</div>
+<script type="text/javascript">
+      function onVidyoClientLoaded(status) {
+               console.log("function called");
+               switch (status.state) {
+               case "READY":    // The library is operating normally              
+                   console.log("Ready to connect")
+                   break;
+               default:
+                   console.log("Vidyo client load failed.");
+                   break;
+               }
+     }     
+
+           document.querySelector("#join-call").addEventListener("click", function(e) {
+               e.preventDefault();
+               const displayName = document.querySelector("input[name=name]").value;
+               fetch("/token")
+                   .then(res => res.json())
+                   .then(function(data) {
+                   const token = data.token;
+                   connect(token, displayName);
+               })
+           });
+
+           function connect(token, displayName) {
+               VC.CreateVidyoConnector({
+                   viewId: "video", // Div ID where the composited video will be rendered
+                   viewStyle: "VIDYO_CONNECTORVIEWSTYLE_Default", // Visual style of the composited renderer
+                   remoteParticipants: 15, // Maximum number of participants
+                   logFileFilter: "warning all@VidyoConnector info@VidyoClient",
+                   logFileName:"",
+                   userData:""
+                   }).then(function(vidyoConnector) {
+                   vidyoConnector.Connect({
+                       host: "prod.vidyo.io",
+                       token: token,
+                       displayName: displayName,
+                       resourceId: "DefaultRoom",
+                       // Define handlers for connection events.
+                       onSuccess: function()            {/* Connected */},
+                       onFailure: function(reason)      {/* Failed */},
+                       onDisconnected: function(reason) {/* Disconnected */}
+                       }).then(function(status) {
+                           if (status) {
+                               console.log("ConnectCall Success");
+                           } else {
+                               console.error("ConnectCall Failed");
+                           }
+                       }).catch(function() {
+                           console.error("ConnectCall Failed");
+                       });
+                   }).catch(function() {
+                   console.error("CreateVidyoConnector Failed");
+                   });
+           }
+         </script>
+<script src="https://static.vidyo.io/latest/javascript/VidyoClient/VidyoClient.js?onload=onVidyoClientLoaded&webrtc=true&plugin=false"></script>
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="e1576b2f-58ec-47b3-ae53-1a0a3fa44ce2";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+</body>  
+</html>

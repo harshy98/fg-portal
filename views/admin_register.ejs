@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Register as Admin</title>
+        <meta name="description">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Signika:400,700" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../admin_register.css">
+    </head>
+    <body>
+
+        <nav class="navbar my-nav navbar-expand-lg navbar-light bg-light">
+            <div class="container" style="max-width: 72%">
+                <a class="navbar-brand ml-5" href="/"><img src="../logoo.png"></a>
+            </div>
+        </nav>
+         <!-- form -->
+        <div id="wholeBody" class="container">
+                <div class="mt-4 d-flex flex-row">
+                    <h4>Register as Admin</h4>
+                    <a class="ml-auto" href="/">Go to Homepage</a>
+                </div>
+                <hr>
+            <form action="/admin/register" method="POST">
+                <div class="form-row">
+                    <div class="col form-group col-12 col-sm-12">
+                        <label for="firstName">First Name:</label>
+                        <input name="firstName" type="text" class="form-control" id="firstlName" placeholder="First Name *" required>
+                    </div>
+                    <div class="col form-group col-12 col-sm-12">
+                        <label for="lastName">Last Name:</label>
+                        <input name="lastName" type="text" class="form-control" id="lastName" placeholder="Last Name *" required>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="male">Male</label>
+                    <input name="gender" type="radio" value="Male">
+                    <label for="female">Female</label>
+                    <input name="gender" type="radio" value="female">
+                    <label for="other">Other</label>
+                    <input name="gender" type="radio" value="other">
+                </div>
+                <div class="form-row">
+                 <div class="col col-12 col-sm-12">
+                    <label for="dob">Date of Birth:</label>
+                    <input name="dob" type="text" class="form-control" id="dob" placeholder="YYYY-MM-DD" required>
+                </div>
+            </div>
+
+                <div class="form-row">
+                    <label for="gender">Contact No:</label>
+                    <div class="col form-group form-inline col-12 col-sm-12">
+                        <label class="sr-only" for="contact">Contact No:</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">+91</div>
+                            </div>
+                            <input name="contact" type="text" class="form-control" id="contact" placeholder="" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="form-group col-12 col-sm-12">
+                    <label for="address">Address:</label>
+                    <textarea class="form-control" id="address" rows="3" placeholder="1234 Market Street *"></textarea>
+                </div> -->
+
+                <div class="form-group ">
+                    <label for="username">User ID:</label>
+                      <!-- <label class="sr-only" for="inlineFormInputGroupUsername">Username</label> -->
+                      <div class="input-group">
+                          <div class="input-group-prepend">
+                              <div class="input-group-text">@</div>
+                          </div>
+                          <input name="user_id" type="text" class="form-control" id="username" placeholder="User ID"required>
+                      </div>
+                  </div>
+
+                <div class="form-row">
+                    <div class="col form-group col-12 col-sm-12">
+                        <label for="email">Email address:</label>
+                        <input name="email" type="email" class="form-control" id="email" placeholder="name@example.com *" required>
+                    </div>
+                    <div class="col form-group  col-12 col-sm-12">
+                        <label for="password">Password:</label>
+                        <input name="password" type="password" class="form-control" id="password" pattern=".{8,16}" placeholder="Password *" required title="8 to 16 characters">
+                    </div>
+                    <div class="col form-group  col-12 col-sm-12">
+                        <label for="password">Confirm Password:</label>
+                        <input name="password2" type="password" class="form-control" id="password" pattern=".{8,16}" placeholder="Password *" required title="8 to 16 characters">
+                    </div>
+                </div>
+
+
+                <input id="check" type="checkbox" required>
+                <label for="check">I accept all the terms and conditions.</label>
+
+
+                <div class="container d-flex justify-content-around mt-4 mb-5">
+                <button type="submit" class="btn btn-outline-danger btn-lg">Register as Admin</button>
+                </div>
+
+
+            </form>
+        </div>
+
+        <div id="google_translate_element"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="" async defer></script>
+        
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+        </script>
+
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    </body>
+</html>
