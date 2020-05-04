@@ -34,7 +34,7 @@
     "jssha": "^2.3.1",
     "method-override": "^3.0.0",
     "mongodb": "^3.1.13",
-    "mongoose": "^5.4.13",
+    "mongoose": "^5.7.5",
     "multer": "^0.1.8",
     "multer-storage-cloudinary": "^2.2.1",
     "nodemailer": "^5.1.1",
